@@ -1,0 +1,31 @@
+/run/initialize
+/run/verbose 0
+
+# -- Set A,Z,Excitation Energy, State and Element Name
+# ====================================================
+/control/alias A 152
+/control/alias Z 63
+/control/alias E 0
+/control/alias N Eu152
+
+# -- Fission Product Source
+# =========================
+
+#/gps/pos/type    Volume
+#/gps/pos/shape   Cylinder
+#/gps/pos/centre  0 0 0.750 cm
+#/gps/pos/radius  0.75 cm
+#/gps/pos/halfz   2.875 cm
+#/gps/pos/rot2    0 0 0.5
+#/gps/pos/confine Sample #VShell
+#/gps/ang/type    iso
+
+/gps/pos/type    Point
+/gps/position    0 0 5 cm
+/gps/ang/type    iso
+
+/gps/particle ion
+/gps/ion {Z} {A} {Z} {E} 
+/process/had/rdm/nucleusLimits {A} {A} {Z} {Z}
+
+/run/beamOn 2000000

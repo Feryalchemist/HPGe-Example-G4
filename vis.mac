@@ -1,0 +1,96 @@
+/run/initialize
+
+/vis/open OGL 30x30-0+0
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/drawVolume
+#/vis/scene/endOfEventAction accumulate 1000
+
+/vis/modeling/trajectories/create/drawByAttribute
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/set/lightsVector -1 0 0
+/vis/viewer/set/background 1 1 1 1
+/vis/viewer/set/lineSegmentsPerCircle 100
+
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+
+#/vis/scene/add/axes 0 0 0 15 cm
+/vis/scene/add/hits
+/vis/scene/endOfEventAction accumulate
+
+# ---- Aluminum
+/vis/geometry/set/forceSolid Outer_Cap
+/vis/geometry/set/colour Outer_Cap 0 0.8 0.8 0.8 0.8
+/vis/geometry/set/forceSolid Insulator
+/vis/geometry/set/colour Insulator 0 0.8 0.8 0.8 0.8
+/vis/geometry/set/forceSolid VShell
+/vis/geometry/set/colour VShell 0 0.8 0.8 0.8 0.8
+
+# ---- Neoprene
+/vis/geometry/set/forceSolid ORing
+/vis/geometry/set/colour ORing 0 1 0.8 1 0.8
+
+# ---- PP
+/vis/geometry/set/forceSolid VSample
+/vis/geometry/set/colour VSample 0 0.9 0.9 0.9 0.8
+
+# ---- Berylium
+/vis/geometry/set/forceSolid Window_Cap
+/vis/geometry/set/colour Window_Cap 0 0.7 0.5 0.5 0.8
+
+# ---- Vacuum
+/vis/geometry/set/forceSolid Vaccum_Gap
+/vis/geometry/set/colour Vaccum_Gap 0 0 0.9 0.9 0.8
+/vis/geometry/set/forceSolid Window_Cap_Gap
+/vis/geometry/set/colour Window_Cap_Gap 0 0 0.9 0.9 0.8
+/vis/geometry/set/forceSolid Housing
+/vis/geometry/set/colour Housing 0 0 0.9 0.9 0.8
+/vis/geometry/set/forceSolid VInternal
+/vis/geometry/set/colour VInternal 0 0 0.9 0.9 0.8
+/vis/geometry/set/forceSolid VSInt
+/vis/geometry/set/colour VSInt 0 0 0.9 0.9 0.8
+/vis/geometry/set/forceSolid PrimaryLeadRoom
+/vis/geometry/set/colour PrimaryLeadRoom 0 0 0.9 0.9 0.8
+
+# ---- Copper
+/vis/geometry/set/forceSolid CrystalHolder
+/vis/geometry/set/colour CrystalHolder 0 0.7 0.7 0.1 0.8
+/vis/geometry/set/forceSolid PrimaryLeadWall_Cu
+/vis/geometry/set/colour PrimaryLeadWall_Cu 0 0.7 0.7 0.1 0.8
+
+# ---- HPGe
+/vis/geometry/set/forceSolid Dead_Layer
+/vis/geometry/set/colour Dead_Layer 0 1 1 0 0.8
+/vis/geometry/set/forceSolid Scintillator
+/vis/geometry/set/colour Scintillator 0 0 0.9 0.2 0.8
+
+# ---- Sample
+/vis/geometry/set/forceSolid Sample
+/vis/geometry/set/colour Sample 0 0.9 0.9 0.1 0.8
+
+# ---- Lead
+/vis/geometry/set/forceSolid LeadTank
+/vis/geometry/set/colour LeadTank 0 0.5 0.5 0.5 0.5
+/vis/geometry/set/forceSolid SecondaryLead
+/vis/geometry/set/colour SecondaryLead 0 0.5 0.5 0.5 0.5
+
+# ---- Steel
+/vis/geometry/set/forceSolid SteelTankWall
+/vis/geometry/set/colour SteelTankWall 0 0.9 0.9 0.9 0.5
+/vis/geometry/set/forceSolid PrimaryLeadWall
+/vis/geometry/set/colour PrimaryLeadWall 0 0.9 0.9 0.9 0.5
+
+/vis/viewer/set/viewpointThetaPhi -90 0
+/vis/viewer/set/upVector 0 0 1
+/vis/viewer/addCutawayPlane 0 0 0 cm  1 0 0
+/vis/viewer/zoom 9
+
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings
+/vis/viewer/flush
+
+/vis/ogl/set/displayListLimit 9999999999
+/vis/scene/endOfEventAction accumulate 1000
