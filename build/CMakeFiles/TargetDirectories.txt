@@ -1,0 +1,4 @@
+/home/feryantama/Desktop/Code/PAPER_Detection/Configuration_1/Detection_DL-5 cm-3/build/CMakeFiles/Simulation.dir
+/home/feryantama/Desktop/Code/PAPER_Detection/Configuration_1/Detection_DL-5 cm-3/build/CMakeFiles/FissionDecay.dir
+/home/feryantama/Desktop/Code/PAPER_Detection/Configuration_1/Detection_DL-5 cm-3/build/CMakeFiles/edit_cache.dir
+/home/feryantama/Desktop/Code/PAPER_Detection/Configuration_1/Detection_DL-5 cm-3/build/CMakeFiles/rebuild_cache.dir
