@@ -2,6 +2,11 @@
 
 This is an example of Geant4 implementation for simulating HPGe detector. The detector is modelled with a dead layer and lead shielding. The emission source could be changed in run.mac file since it uses General Particle Source (GPS). The result consists of the energy deposition for each simulated particle, compiled inside a tabulated 'HistData.dat' file and the '.root' file. In current settings, the simulation could not run in Multithreade due to the needs of continously read/write file to HistData (ASCII) after each simulated event.
 
+
+<p align="center">
+  <img src="https://github.com/Feryalchemist/HPGe-Example-G4/blob/main/Geom.png?raw=true" alt="HPGe Geometry"/>
+</p>
+
 The column of 'HistData.dat' comprises of:
 
 EventID,TrackID,fx,fy,fz,CopyNo,Particle,Edep,Volume
